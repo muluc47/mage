@@ -1,0 +1,85 @@
+{
+    "name": "baslatnet/baslat",
+    "description": "The Baslat Property System.",
+    "type": "project",
+    "authors": [
+        {
+            "name": "baslat net",
+            "email": "info@baslat.com.tr"
+        }
+    ],
+    "require": {
+        "php": ">=7.2.0",
+        "beyondcode/laravel-websockets": "^1.4",
+        "doctrine/dbal": "^2.10",
+        "fideloper/proxy": "^4.0",
+        "fzaninotto/faker": "~1.4",
+        "jackiedo/dotenv-editor": "^1.0",
+        "laravel/framework": "^6.2",
+        "laravel/helpers": "^1.1",
+        "laravel/tinker": "^2.0",
+        "mohammad-fouladgar/eloquent-builder": "^2.2",
+        "nwidart/laravel-modules": "^6.0",
+        "pusher/pusher-php-server": "~3.0",
+        "sindev95/stylist": "dev-master",
+        "swayok/alternative-laravel-cache": "^5.4",
+        "symfony/intl": "^4.4",
+        "wikimedia/composer-merge-plugin": "^1.4"
+    },
+    "require-dev": {
+        "barryvdh/laravel-debugbar": "^3.0",
+        "beyondcode/laravel-dump-server": "^1.0",
+        "beyondcode/laravel-query-detector": "^1.0",
+        "filp/whoops": "^2.0",
+        "nunomaduro/collision": "^2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Baslat\\": "app/",
+            "Modules\\": "Modules/",
+            "Themes\\": "Themes/"
+        }
+    },
+    "scripts": {
+        "post-root-package-install": [
+            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+        ],
+        "post-autoload-dump": [
+            "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
+            "@php artisan package:discover"
+        ],
+        "post-install-cmd": [
+            "Illuminate\\Foundation\\ComposerScripts::postInstall"
+        ],
+        "post-update-cmd": [
+            "Illuminate\\Foundation\\ComposerScripts::postUpdate"
+        ]
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "sort-packages": true,
+        "preferred-install": "dist",
+        "platform": {
+            "php": "7.2.0"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "dont-discover": [
+                "nwidart/laravel-modules"
+            ]
+        },
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        },
+        "merge-plugin": {
+            "require": [
+                "Modules/*/composer.json",
+                "Themes/*/composer.json"
+            ],
+            "merge-extra": true,
+            "merge-extra-deep": true,
+            "merge-scripts": true
+        }
+    }
+}

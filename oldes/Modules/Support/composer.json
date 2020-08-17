@@ -1,0 +1,30 @@
+{
+    "name": "baslat/support",
+    "description": "The Baslat Support Module.",
+    "authors": [
+        {
+            "name": "baslat net",
+            "email": "info@baslat.com.tr"
+        }
+    ],
+    "require": {
+        "php": ">=7.2.0",
+        "mehedi/laravel-captcha": "^3.0",
+        "instamojo/instamojo-php": "^0.4",
+        "spatie/once": "^2.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\Support\\": ""
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev"
+}

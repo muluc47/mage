@@ -1,0 +1,27 @@
+{
+    "name": "baslat/order",
+    "description": "The Baslat Order Module.",
+    "authors": [
+        {
+            "name": "baslat net",
+            "email": "info@baslat.com.tr"
+        }
+    ],
+    "require": {
+        "php": ">=7.2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\Order\\": ""
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev"
+}

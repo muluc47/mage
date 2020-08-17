@@ -1,0 +1,10 @@
+{
+    "name": "Slider",
+    "alias": "slider",
+    "description": "The Baslat Slider Module.",
+    "order": 100,
+    "providers": [
+        "Modules\\Slider\\Providers\\SliderServiceProvider",
+        "Modules\\Slider\\Providers\\RouteServiceProvider"
+    ]
+}

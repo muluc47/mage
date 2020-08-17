@@ -1,0 +1,27 @@
+{
+    "name": "baslat/page-module",
+    "description": "The Baslat Page Module.",
+    "authors": [
+        {
+            "name": "baslat net",
+            "email": "info@baslat.com.tr"
+        }
+    ],
+    "require": {
+        "php": ">=7.2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\Page\\": ""
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev"
+}
