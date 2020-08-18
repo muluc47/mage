@@ -9,7 +9,7 @@ class CreatePasswordResetsTable extends Migration
     /**
      * Run the migrations.
      *
-     * @return void
+     * @return void bir snaiye
      */
     public function up()
     {

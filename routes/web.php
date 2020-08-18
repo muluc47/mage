@@ -26,7 +26,7 @@ Route::get('lang/{locale}',[LanguageController::class,'swap']);
 Route::get('/access-control', 'AccessController@index');
 Route::get('/access-control/{roles}', 'AccessController@roles');
 Route::get('/ecommerce', 'AccessController@home')->middleware('role:Admin');
-Route::middleware(['auth'])->group(function () {
+
     Route::get('/','StarterKitController@index');
     Route::get('sale-operation', 'SaleOperationController@index');
     Route::get('sale-operation/create', 'SaleOperationController@create');
@@ -56,9 +56,19 @@ Route::middleware(['auth'])->group(function () {
     Route::get('teminatlar/edit/{id}', 'ContractController@edit');
     Route::post('teminatlar/update/{id}', 'ContractController@update');
     Route::get('teminatlar/delete/{id}', 'ContractController@destroy');
-});
+
 
 Auth::routes();
 Wizard::routes('wizard/user', 'UserWizardController', 'wizard.user');
 
 Wizard::routes('wizard/sales_operation', 'SalesOperationWizardController', 'wizard.sales_operation');
+/*
+ * Tuncay Yapılanlar *
+ *
+ */
+///Gönderilmesi Gereken lisans evrakları
+Route::view('/license-document', 'license.index');
+Route::view('/license-document/create', 'license.create');
+//Bayilik İleri Yarıtım
+Route::view('/dealership-investment', 'dealership-investment.index');
+Route::view('/dealership-investment/create', 'dealership-investment.create');
